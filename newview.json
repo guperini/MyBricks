@@ -1,0 +1,12 @@
+{
+"name" : "login",
+"viewDependencies" : [
+    {"isAbstract" : false, "isController" : true,  "dependency" : "app_controller",        "isUsecase" : false},
+    {"isAbstract" : true,  "isController" : false, "dependency" : "get_all_books_usecase", "isUsecase" : true},
+    {"isAbstract" : true,  "isController" : false, "dependency" : "http_adapter",          "isUsecase" : false}
+],
+"methods" : [
+    {"type" : "String", "isFuture" : true,  "method":"getUserName"},
+    {"type" : "String", "isFuture" : false, "method":"getUserInicials"}
+]
+}

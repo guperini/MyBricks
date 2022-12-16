@@ -1,0 +1,56 @@
+name: entity_usecases_new
+description: A new brick created with the Mason CLI.
+
+version: 0.0.34
+
+environment:
+  mason: ">=0.1.0-dev.26 <0.1.0"
+
+vars:
+  name:
+    type: string
+    description: Entity Name
+    default: book_entity
+    prompt: Entity name? ex. user_entity
+  params:
+    type: string
+    description: 'JSON Params List ([{"type":"String","param":"id", "nullable" : false, "required" : true},{"type":"String","param":"descricao", "nullable" : false, "required" : true}]})'
+    default: '[{"type":"String","param":"id", "nullable" : false, "required" : true},{"type":"String","param":"descricao, "nullable" : false, "required" : true"}]'
+    prompt: Params list?
+  usecases:
+    type: string
+    description: 'JSON Usecases List ([{"usecaseName" : "get_all_books",left":"Exception","rightIsList" : true, "right":"id"},]})'
+    default: '[{"usecaseName" : "get_all_books","left":"Exception","rightIsList" : true, "right":"id"},]'
+    prompt: Usecases List?
+
+
+#  How to create the entity and usecases:
+#  
+#  Create the json file just like the example below in the project root
+#  
+#  In the terminal execute:
+#  
+#  mason make entity_usecases_new -c entity.json -o ./lib
+#  
+#  
+#  
+#  Example
+#  entity.json:
+#  
+#  {
+#      "name": "book_entity",
+#      "params": [
+#          {"type": "String","param": "kind",    "nullable" : false,"required" : true},
+#          {"type": "String","param": "id",      "nullable" : false,"required" : true},
+#          {"type": "String","param": "etag",    "nullable" : false,"required" : true},
+#          {"type": "String","param": "selfLink","nullable" : true, "required" : false},
+#          {"type": "bool",  "param": "isActive","nullable" : true, "required" : false}
+#      ],
+#      "usecases": [
+#      {"usecaseName" : "get_all_books",    "left":"Exception","rightIsList" : true,  "right":"BookEntity"},
+#      {"usecaseName" : "get_favorite_book","left":"Exception","rightIsList" : false, "right":"BookEntity"},
+#      {"usecaseName" : "delete_book",      "left":"Exception","rightIsList" : false, "right":"bool"},
+#      {"usecaseName" : "buy_book",         "left":"Exception","rightIsList" : false, "right":"BookEntity"},
+#      {"usecaseName" : "get_mobile_books", "left":"Exception","rightIsList" : true,  "right":"BookEntity"}
+#  ]
+#  }
