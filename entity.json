@@ -1,0 +1,11 @@
+{
+    "name": "book",
+    "usecases": [
+        {"usecaseName" : "get_all_books","left":"Exception","rightIsList" : true, "right":"Book"}
+    ],
+    "params" : [
+        {"type":"String","param":"id", "nullable" : false, "required" : true},
+        {"type":"String","param":"descricao", "nullable" : false, "required" : true},
+        {"type":"String","param":"apelido", "nullable" : true, "required" : false}
+    ]
+}
