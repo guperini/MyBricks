@@ -9,7 +9,7 @@ class {{name.pascalCase()}}Controller extends GetxController {
 
     // arguments
 
-    // text controllers
+    // controllers
 
     // lists
 

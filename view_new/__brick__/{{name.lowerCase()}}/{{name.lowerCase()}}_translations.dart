@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 
 abstract class {{name.pascalCase()}}Translations {
 
-  static String i18n(String key) => _translations[AppController.locale]![key]!;
+  static String i18n(String key) => _translations[AppController.locale.languageCode]![key]!;
   static const _translations = {
     "en": {
       "hello": "Hello",
@@ -14,4 +14,6 @@ abstract class {{name.pascalCase()}}Translations {
       "hello": "Ola",
     },
   };
+
+  static String get hello => i18n("hello");
 }
