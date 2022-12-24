@@ -30,7 +30,7 @@ class {{name.pascalCase()}}View extends GetView<{{name.pascalCase()}}Controller>
 
     // Colocar no arquivo de rotas dentro da lista de rotas:
     // GetPage(
-    //   name: Rotas.{{name.camelCase()}},
+    //   name: Routes.{{name.camelCase()}},
     //   page: () => {{name.pascalCase()}}View(),
     //   transition: Transition.native,
     //   binding: {{name.pascalCase()}}Binding(),
