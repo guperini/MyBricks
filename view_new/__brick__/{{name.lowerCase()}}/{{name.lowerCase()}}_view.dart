@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '{{name.lowerCase()}}_controller.dart';
-import 'componentes/header_{{name.lowerCase()}}.dart';
-import 'componentes/body_{{name.lowerCase()}}.dart';
-import 'componentes/bottom_{{name.lowerCase()}}.dart';
 
 class {{name.pascalCase()}}View extends GetView<{{name.pascalCase()}}Controller> {
   const {{name.pascalCase()}}View({Key? key}) : super(key: key);
@@ -15,11 +12,7 @@ class {{name.pascalCase()}}View extends GetView<{{name.pascalCase()}}Controller>
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: const [
-          Header{{name.pascalCase()}}(),
-          Spacer(),
-          Body{{name.pascalCase()}}(),
-          Spacer(),
-          Bottom{{name.pascalCase()}}(),
+
         ],
       ),
     );
@@ -31,7 +24,7 @@ class {{name.pascalCase()}}View extends GetView<{{name.pascalCase()}}Controller>
     // Colocar no arquivo de rotas dentro da lista de rotas:
     // GetPage(
     //   name: Routes.{{name.camelCase()}},
-    //   page: () => {{name.pascalCase()}}View(),
+    //   page: () => const {{name.pascalCase()}}View(),
     //   transition: Transition.native,
     //   binding: {{name.pascalCase()}}Binding(),
     // ),
