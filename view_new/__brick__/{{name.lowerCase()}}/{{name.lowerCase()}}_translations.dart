@@ -1,3 +1,4 @@
+import '../../../core/app/base_controller.dart';
 
 abstract class {{name.pascalCase()}}Translations {
 
