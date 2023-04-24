@@ -1,7 +1,7 @@
 
 abstract class {{name.pascalCase()}}Translations {
 
-  static String i18n(String key) => _translations[AppController.locale.languageCode]![key]!;
+  static String i18n(String key) => _translations[BaseController.locale.languageCode]![key]!;
   static const _translations = {
     "en": {
       "hello": "Hello",
